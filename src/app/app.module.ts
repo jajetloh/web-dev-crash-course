@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { AppComponent } from "./app.component"
+import { RouterLink, RouterOutlet } from "@angular/router"
 
 
 @NgModule({
@@ -8,7 +9,9 @@ import { AppComponent } from "./app.component"
         AppComponent,
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        RouterLink,
+        RouterOutlet
     ]
 })
 export class AppModule {
