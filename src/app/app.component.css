@@ -1,3 +1,13 @@
-.c-navbar-bg {
-    background-color: lightgray;
+p {
+  background-color: red;
+}
+.page-link,
+ngb-pagination {
+  color: #d400ff;
+  background-color: #c71818;
+}
+
+.pagination .page-link-blue {
+  color: #f700ff;
+  background-color: #bd1010;
 }

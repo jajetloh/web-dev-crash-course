@@ -1,0 +1,14 @@
+
+<nav class="c-navbar-bg text-primary">
+    <span>Web Dev Crash Course</span>
+    <button class="btn btn-sm btn-outline-primary border-0" [routerLinkActive]="'text-white'" routerLink="/" [routerLinkActiveOptions]="{ exact: true }">Home</button>
+    <button class="btn btn-sm btn-outline-primary border-0" [routerLinkActive]="'text-white'" routerLink="/tutorial">Tutorial</button>
+    <button class="btn btn-sm btn-outline-primary border-0" [routerLinkActive]="'text-white'" routerLink="/resources">Resources</button>
+</nav>
+<div class="d-flex">
+    <div class="col-1"></div>
+    <div class="col-10">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="col-1"></div>
+</div>
