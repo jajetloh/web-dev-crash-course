@@ -6,25 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { HomeComponent } from './home/home.component';
 import { ResourcesComponent } from './resources/resources.component';
-import { NgbModalModule, NgbModule, NgbTypeaheadModule } from '@ng-bootstrap/ng-bootstrap'
-import { FormsModule } from "@angular/forms";
-import { ModalContentComponent } from './modal-content/modal-content.component'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { FormsModule } from "@angular/forms"
 
 @NgModule({
     declarations: [
         AppComponent,
         TutorialComponent,
         HomeComponent,
-        ResourcesComponent,
-        ModalContentComponent
+        ResourcesComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         NgbModule,
-        FormsModule,
-        NgbTypeaheadModule,
-        NgbModalModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
