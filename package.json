@@ -1,41 +1,41 @@
 {
-  "name": "llqixgwmj.github",
-  "version": "0.0.0",
-  "private": true,
-  "dependencies": {
-    "@angular-devkit/build-angular": "^16.2.4",
-    "@angular/animations": "16.2.6",
-    "@angular/common": "16.2.6",
-    "@angular/compiler": "16.2.6",
-    "@angular/compiler-cli": "16.2.6",
-    "@angular/core": "16.2.6",
-    "@angular/forms": "16.2.6",
-    "@angular/localize": "16.2.6",
-    "@angular/platform-browser": "16.2.6",
-    "@angular/platform-browser-dynamic": "16.2.6",
-    "@angular/router": "16.2.6",
-    "@ng-bootstrap/ng-bootstrap": "15.1.1",
-    "@popperjs/core": "2.11.8",
-    "@types/jasmine": "4.3.6",
-    "bootstrap": "5.3.2",
-    "rxjs": "7.8.1",
-    "tslib": "2.6.2",
-    "typescript": "5.1.6",
-    "zone.js": "0.13.3"
-  },
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-  "devDependencies": {
-    "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.0",
-    "protractor": "~7.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0"
-  }
+    "name": "llqixgwmj.github",
+    "version": "0.0.0",
+    "private": true,
+    "dependencies": {
+        "@angular/animations": "16.2.6",
+        "@angular/common": "16.2.6",
+        "@angular/compiler": "16.2.6",
+        "@angular/compiler-cli": "16.2.6",
+        "@angular/core": "16.2.6",
+        "@angular/forms": "16.2.6",
+        "@angular/localize": "16.2.6",
+        "@angular/platform-browser": "16.2.6",
+        "@angular/platform-browser-dynamic": "16.2.6",
+        "@angular/router": "16.2.6",
+        "@ng-bootstrap/ng-bootstrap": "15.1.1",
+        "@popperjs/core": "2.11.8",
+        "@types/jasmine": "4.3.6",
+        "bootstrap": "5.3.2",
+        "rxjs": "7.8.1",
+        "tslib": "2.6.2",
+        "typescript": "5.1.6",
+        "zone.js": "0.13.3"
+    },
+    "scripts": {
+        "ng": "ng",
+        "start": "ng serve",
+        "build": "ng build",
+        "test": "ng test",
+        "lint": "ng lint",
+        "e2e": "ng e2e"
+    },
+    "devDependencies": {
+        "@angular-devkit/build-angular": "^16.2.4",
+        "@types/node": "^12.11.1",
+        "codelyzer": "^6.0.0",
+        "protractor": "~7.0.0",
+        "ts-node": "~8.3.0",
+        "tslint": "~6.1.0"
+    }
 }
