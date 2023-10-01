@@ -23,7 +23,7 @@
     <div>And some cons...</div>
     <ul>
         <li>There is a substantial learning curve! Building a web application is not as easy as assembling a basic application in Excel or Google Sheets</li>
-        <li>Building web applications can be time-consuming! Before building a web application, ask yourself, is it worth it? If you are building a site for your portfolio which only a few people will see, perhaps it's better to use a blogging website or a low-code platform, and put more time into the content instead of building an application.</li>
+        <li>Building web applications can be time-consuming! Before building a web application, ask yourself, is it worth it? If you are building a site for your portfolio which only a few people will see, and you're only looking to get the job done quickly, perhaps it's better to use a blogging website or a low-code platform.</li>
         <li>Hosting websites usually costs money. There are ways to host websites for free, such as with GitHub Pages, but most web applications will need to be hosted on a provider such as AWS, Azure or Google Cloud, or on your own server. And as an extreme case, malicious actors can overwhelm your site and drive up your upkeep costs!</li>
     </ul>
     <h1>
@@ -101,7 +101,7 @@
                 What about very complex web pages?
             </b>
             <div>
-                When developing applications, breaking code into smaller logical sections helps keep the code maintainable. This is usually done by separating HTML/CSS/JS files into multiple files. A <b>bundler</b> (such as webpack or Vite) can be used to re-compile
+                When developing applications, breaking code into smaller logical sections helps keep the code maintainable. This is usually done by separating HTML/CSS/JS files into multiple files. A <b>bundler</b> (such as webpack or Vite) can be used to re-compile these multiple files into individual HTML/CSS/JS classes for easy deployment and use by end users.
             </div>
             <b>
                 What is TypeScript?
@@ -206,7 +206,7 @@
         <ol>
             <li>Use a horizontal alignment class from <a href="https://getbootstrap.com/docs/5.3/layout/columns/#horizontal-alignment" target="_blank">here</a> to distribute your buttons, stretching across the entire width of the container</li>
             <li>Use a different vertical alignment class from <a href="https://getbootstrap.com/docs/5.3/layout/columns/#horizontal-alignment" target="_blank">here</a> to align the botton edges of the buttons</li>
-            <li>The buttons may look better with spacing between the two rows. Try one of the <code></code>
+            <li>The buttons may look better with spacing between the two rows. Try one of the following classes to the <code>div</code> containing the second row of buttons: <code>mt-1 mt-2 mt-3 mt-4 mt-5</code>
         </ol>
         <!-- Exercise 4.3. | YOUR CONTENT HERE! -->
 
@@ -230,8 +230,7 @@
         </div>
 
         <div>
-            This input adds three
-            <input type="number" [(ngModel)]="numberToAddThreeTo"> {{ numberToAddThreeTo + 3 }}
+            <input type="number" [(ngModel)]="numberToAddThreeTo"> + 3 = {{ numberToAddThreeTo + 3 }}
         </div>
 
         <!-- Exercise 4.4. | YOUR CONTENT HERE! -->
