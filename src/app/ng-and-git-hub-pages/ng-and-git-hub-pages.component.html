@@ -1,0 +1,79 @@
+<div class="my-5">
+    <div>
+        <h1>5. Web Dev with GitHub Pages and Angular</h1>
+        <!--    <h4>10th April 2024</h4>-->
+        <p>This tutorial guides you through the process of deploying your first basic web application using Angular and GitHub Pages, via the angular-cli-ghpages package, and includes a summary of considerations, limitations, and inspiration to take when building your own apps with this stack.</p>
+        <p>This tutorial focuses on the process from zero to deployment rather than on the syntax and tradeoffs of Angular. See the <a [routerLink]="['..', 'angular-basics']">Angular Basics tutorial</a> for an overview of Angular syntax.</p>
+    </div>
+    <div>
+        <h2>5.1. What can we do with GitHub Pages?</h2>
+        <p><a href="https://github.com/pricing">GitHub Pages</a> is a 'static' site hosting solution offered by GitHub. Although there are paid tiers, the free tier (for individuals) is a great option for hosting small, personal projects.</p>
+        <p>Usage of GitHub Pages must firstly abide by the specified Terms of Service and other limitations, <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">most of which are outlined here</a>.</p>
+        <p>Besides these, there are a few more important points which limit what we are able to host here.</p>
+        <ol>
+            <li>Code must be pushed to GitHub for deployments to work, so you will likely use GitHub to host your project repository.</li>
+            <li>Only 'static' websites are supported. This means that all HTML/CSS/JS content must be sent to the user upon their browser opening the page. This is in contrast to, a server which can send new HTML/CSS/JS as a user navigates through the application.</li>
+            <li>Note that the term 'static website' is not a well-defined term, but websites can be thought of on a spectrum from static to dynamic. Strict definition of 'static' say that no API calls beside the initial load can be made (e.g. JavaScript fetching images or data from another URL). For our purposes, we consider 'static' sites as those requiring minimal calls to such additional resources.</li>
+            <li>As with any website you decide to host (not just static ones, and not only those on GitHub Pages), cybersecurity should be a consideration. For example, you can choose to have your front-end make requests to your own separate back-end server, but it is easy for people with a small amount of programming experience to extract your back-end server's URL once the front-end makes a call to it, which can expose your back-end application to all sorts of attacks.</li>
+        </ol>
+        <p>With all of those considerations in mind, we will now walk through setting up our own Angular application, with support to easily deploy to GitHub pages, and then look at some more examples of what we can do with our applications.</p>
+    </div>
+
+    <div>
+        <h2>5.2. Installation and Setup</h2>
+        <p>This section guides you through setting up Git and Angular locally, and creating a new repository in your GitHub account. If you already have any of these dependencies installed, you do not need to re-install them.</p>
+        <ol>
+            <li>Install <a href="https://git-scm.com/">Git</a> locally.</li>
+            <li>Install <a href="https://code.visualstudio.com/">Visual Studio Code</a> locally, or alternatively use your preferred IDE.</li>
+            <li>Follow the <a href="https://angular.io/guide/setup-local">Angular Documentation</a> to set up Angular locally. Note that <a href="https://nodejs.org/en">Node</a> is required as a dependency.</li>
+            <li>Create a <a href="https://github.com/">GitHub</a> account if you do not already have one.</li>
+            <li>Once logged in, create a new <b>public</b> repository. Note the name of the repository, as this will be needed later.</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>5.3. A Minimal App</h2>
+        <ol>
+            <li>Using your command line terminal of choice, set your working directory to a desired folder, and run <code>ng new</code> and follow the prompts to create a template app. This command creates a new folder within your working directory which contains your application.</li>
+            <li>Open the newly created application folder in Visual Studio Code (or your preferred IDE)</li>
+            <li>Run <code>ng serve</code> in your application folder to locally serve the application, and open the provided link (usually to <a href="http://localhost:4200">http://localhost:4200</a>). Congratulations, you have an Angular application!</li>
+            <li>The default page you see is defined in <code>src/app/app.component.html</code>. Try making some modifications and see how they reflect in the browser. For example, add some text content under the existing text, or try adding a new link pill on the right sidebar. We will leave this for now to focus on the rest of the deployment pipeline, and return later.</li>
+            <li>Stage your changes in Git with <code>git add .</code> then create a commit with your changes with <code>git commit -m "&lt;YOUR COMMIT MESSAGE HERE&gt;"</code></li>
+            <li>Go to your GitHub repository page as created earlier, and follow the prompts to push. Refresh the page, and if successful you will see your code in the GitHub repository.</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>5.4. angular-cli-ghpages</h2>
+        <ol>
+            <li>From the <a href="https://www.npmjs.com/package/angular-cli-ghpages">angular-cli-ghpages</a> web page, follow steps 3-5 of the Quick Start guide to install and deploy your app to GitHub pages. Note that you will need the repository name as created earlier.</li>
+            <li>After the deployment is complete from <code>angular-cli-ghpages</code>, it can take a few minutes for the changes to take place. Under 'Settings' &gt; 'Pages' in your GitHub repository, you can see if your page has been deployed yet, and how long ago it was deployed.</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>5.5. Examples and Inspiration</h2>
+        <p>Now that we have a way to deploy Angular applications to GitHub Pages, what can we do with our apps? Bearing in mind the limitations and considerations from earlier, here are some ideas for inspiration:</p>
+        <ol>
+            <li>Mathematical engines and logic can be embedded into your JavaScript code to run purely in the user's browser, like this <a href="https://jajetloh.github.io/parks-solver/">solver for Parks Puzzles</a>. This example is complete static in the sense that no further data is fetched after the initial HTML/CSS/JS payload, neither from a database nor backend. All dynamic content is provided by user inputs and JavaScript.</li>
+            <div class="d-flex justify-content-center">
+                <a href="https://jajetloh.github.io/parks-solver/" class="d-flex justify-content-center" style="width: 80%">
+                    <img class="border" src="../assets/thumb-parks-solver.png" width="100%">
+                </a>
+            </div>
+            <li>Applications can still be data-driven as long as data is embedded within the application, or is sourced from a publicly accessible location, or is provided by the user. <a href="https://jajetloh.github.io/numerical-integrators-v4/">This trajectory plotting application, PathViewer</a> begins with an embedded dataset upon loading, but can fetch data from a simple database (the same GitHub repository in this case), and is able to accept user inputs in the appropriate format. As all data in this case is stored in GitHub or provided by users, there is no back-end server that we need to take care of securing or maintaining.</li>
+            <div class="d-flex justify-content-center">
+                <a href="https://jajetloh.github.io/numerical-integrators-v4/" class="d-flex justify-content-center" style="width: 80%">
+                    <img class="border" src="../assets/thumb-path-viewer.png" width="100%">
+                </a>
+            </div>
+            <li>Animation of page content on scroll can be done using CSS and the <code>IntersectionObserver</code> API available via JavaScript in all common browsers. <a href="https://youtu.be/T33NN_pPeNI?si=rDxuxgXTiqIQxw6U">This tutorial from Beyond Fireship</a> demonstrates how to do this (with a plain JavaScript project).</li>
+            <div class="d-flex justify-content-center">
+                <a href="https://youtu.be/T33NN_pPeNI?si=rDxuxgXTiqIQxw6U" class="d-flex justify-content-center" style="width: 80%">
+                    <img class="border" src="../assets/thumb-fireship-scroll-animate.png" width="100%">
+                </a>
+            </div>
+        </ol>
+    </div>
+
+</div>
