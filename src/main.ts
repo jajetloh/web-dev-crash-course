@@ -1,5 +1,6 @@
 /// <reference types="@angular/localize" />
-import 'zone.js/dist/zone'; // Avoid NG0908 error in StackBlitz
+// import 'zone.js/dist/zone'; // Avoid NG0908 error in StackBlitz
+import 'zone.js'
 
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
