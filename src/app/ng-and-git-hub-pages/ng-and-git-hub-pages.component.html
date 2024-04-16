@@ -55,25 +55,74 @@
         <h2>5.5. Examples and Inspiration</h2>
         <p>Now that we have a way to deploy Angular applications to GitHub Pages, what can we do with our apps? Bearing in mind the limitations and considerations from earlier, here are some ideas for inspiration:</p>
         <ol>
-            <li>Mathematical engines and logic can be embedded into your JavaScript code to run purely in the user's browser, like this <a href="https://jajetloh.github.io/parks-solver/">solver for Parks Puzzles</a>. This example is complete static in the sense that no further data is fetched after the initial HTML/CSS/JS payload, neither from a database nor backend. All dynamic content is provided by user inputs and JavaScript.</li>
+
+            <li>
+                <a href="https://magenta.github.io/lofi-player/">Lo-Fi Player</a> allows users to create their own lo-fi music by selecting different instruments and beats, and uses <a href="https://magenta.tensorflow.org/">magenta.js</a> to power a Machine Learning model to generate the music from the user's inputs. You can read more about how this work in <a href="https://magenta.tensorflow.org/lofi-player">magenta's blog post on the Lo-Fi Player</a>. The source code for the site is <a href="https://github.com/magenta/lofi-player">available on GitHub</a>.
+            </li>
             <div class="d-flex justify-content-center">
-                <a href="https://jajetloh.github.io/parks-solver/" class="d-flex justify-content-center" style="width: 80%">
+                <a href="https://magenta.github.io/lofi-player/" class="d-flex justify-content-center" style="width: 60%">
+                    <img class="border" src="assets/thumb-lofi-player.png" width="100%">
+                </a>
+            </div>
+            <li>
+                <a href="https://rebeccazhou666.github.io/soundCatcher/">Sound Catcher</a> is a browser "motorcycle game" by Rebecca Zhou hosted on GitHub Pages, which uses audio input from a user's microphone as input into the game to control the shape of the floor. The game uses <a>ml5.js</a> for audio pitch detection. The <a href="https://github.com/RebeccaZhou666/soundCatcher">code is available on GitHub</a>, as well as notes on Rebecca's process in creating this app.
+            </li>
+            <div class="d-flex justify-content-center">
+                <a href="https://rebeccazhou666.github.io/soundCatcher/" class="d-flex justify-content-center" style="width: 60%">
+                    <img class="border" src="assets/thumb-sound-catcher.png" width="100%">
+                </a>
+            </div>
+            <li><a href="https://vibertthio.com/beact/">Beact</a> is an incredible DJ/VJ app by <a href="https://vibertthio.com/">Vibert Thio</a>that allows users to create their own a mesmerising audio-visual experience, or simply enjoy a preset pattern. The <a href="https://github.com/vibertthio/beact-client/tree/master/src">source code is available on GitHub</a> and uses React, but is a powerful demonstration of what you can do with a single-page application without a backend.</li>
+            <div class="d-flex justify-content-center">
+                <a href="https://vibertthio.com/beact/" class="d-flex justify-content-center" style="width: 60%">
+                    <img class="border" src="assets/thumb-beact.png" width="100%">
+                </a>
+            </div>
+            <li>Mathematical engines and logic can be embedded into your JavaScript code to run purely in the user's browser, like this <a href="https://jajetloh.github.io/parks-solver/">solver for Parks Puzzles</a>. This example is complete static in the sense that no further data is fetched after the initial HTML/CSS/JS payload, neither from a database nor backend. User inputs are translated into a <a href="https://en.wikipedia.org/wiki/Integer_programming">Integer Programming</a> problem and passed to the <a href="https://github.com/lovasoa/highs-js">HiGHS</a> library to solve. All dynamic content is provided by user inputs and JavaScript. Note that if you are trying to include a MILP (the more general case of Integer Programming) within StackBlitz, you may run in to storage issues and may need to use <a href="https://github.com/jajetloh/minilp-wasm/tree/main">minilp-wasm</a> as a solver instead.</li>
+            <div class="d-flex justify-content-center">
+                <a href="https://jajetloh.github.io/parks-solver/" class="d-flex justify-content-center" style="width: 60%">
                     <img class="border" src="assets/thumb-parks-solver.png" width="100%">
                 </a>
             </div>
-            <li>Applications can still be data-driven as long as data is embedded within the application, or is sourced from a publicly accessible location, or is provided by the user. <a href="https://jajetloh.github.io/numerical-integrators-v4/">This trajectory plotting application, PathViewer</a> begins with an embedded dataset upon loading, but can fetch data from a simple database (the same GitHub repository in this case), and is able to accept user inputs in the appropriate format. As all data in this case is stored in GitHub or provided by users, there is no back-end server that we need to take care of securing or maintaining.</li>
+            <li>Applications can still be data-driven as long as data is embedded within the application, or is sourced from a publicly accessible location, or is provided by the user. <a href="https://jajetloh.github.io/numerical-integrators-v4/">This trajectory plotting application, PathViewer</a> begins with an embedded dataset upon loading, but can fetch data from a simple, publically accessible file store (<a href="https://github.com/jajetloh/numerical-integrators-v4/tree/main/data">the same GitHub repository</a> in this case), and is able to accept user inputs in the appropriate format. As all data in this case is stored in GitHub or provided by users, there is no back-end server that we need to take care of securing or maintaining. <a href="https://threejs.org/">Three.js</a> is used to build the 3D interactive drawing and is also entirely embedded into the initial JavaScript fetched by the client. <a href="https://dev.to/renancferro/understanding-and-implementing-threejs-with-angular-and-creating-a-3d-animation-3eea">This tutorial by Renan Ferro</a> walks through how you can add a basic Three.js element to an Angular project.</li>
             <div class="d-flex justify-content-center">
-                <a href="https://jajetloh.github.io/numerical-integrators-v4/" class="d-flex justify-content-center" style="width: 80%">
+                <a href="https://jajetloh.github.io/numerical-integrators-v4/" class="d-flex justify-content-center" style="width: 60%">
                     <img class="border" src="assets/thumb-path-viewer.png" width="100%">
                 </a>
             </div>
             <li>Animation of page content on scroll can be done using CSS and the <code>IntersectionObserver</code> API available via JavaScript in all common browsers. <a href="https://youtu.be/T33NN_pPeNI?si=rDxuxgXTiqIQxw6U">This tutorial from Beyond Fireship</a> demonstrates how to do this (with a plain JavaScript project).</li>
             <div class="d-flex justify-content-center">
-                <a href="https://youtu.be/T33NN_pPeNI?si=rDxuxgXTiqIQxw6U" class="d-flex justify-content-center" style="width: 80%">
+                <a href="https://youtu.be/T33NN_pPeNI?si=rDxuxgXTiqIQxw6U" class="d-flex justify-content-center" style="width: 60%">
                     <img class="border" src="assets/thumb-fireship-scroll-animate.png" width="100%">
                 </a>
             </div>
+            <li>For even more inspiration you can check out <a href="https://github.com/logancyang/awesome-personal-websites">this list of personal websites compiled by Logan Yang</a> or <a href="https://ml5js.org/community/">some projects featured in ml5.js's community</a>.</li>
         </ol>
     </div>
 
+    <div>
+        <h2>5.6. Project Ideas</h2>
+        <p>The best way to learn is by doing! Being able to build and host your own applications on a free platform like GitHub Pages is very powerful and is a great way to begin your experience in Web Development. If you have ideas on what you would like to make, by all means go ahead! But not a problem if nothing comes to mind so far, below are some ideas that may interest you as a next project:</p>
+        <b>Simple</b>
+        <ul>
+            <li>An online CV and portfolio. A few examples are listed here for more inspiration, but keep in mind that if your end goal is solely a professional site with stunning visuals with minimal effort, consider using other solutions such as Squarespace, Vix, etc.</li>
+            <ul>
+                <li><a href="https://www.ruixinzheng.com/">Ruixin Zheng</a></li>
+                <li><a href="https://www.ryoyatakashima.com/">Ryoya Takashima</a></li>
+                <li><a href="https://www.lydiajessup.me/">Lydia Jessup</a></li>
+                <li><a href="https://jinglescode.github.io/">Hong Jing (Jingles)</a></li>
+            </ul>
+            <li>Calculator to select and convert between different units (e.g. kg to tonnes to lb etc.)</li>
+            <li>Choose-your-own-adventure game</li>
+        </ul>
+        <b>More Involved</b>
+        <ul>
+            <li>Solver and/or mathematical engine, including a user-friendly interface</li>
+            <li>Sound or video processing using existing JavaScript/WebAssembly libraries with a user-friendly interface</li>
+        </ul>
+        <b>Complex</b>
+        <ul>
+            <li>Refer to some of the examples in the 'Examples and Inspiration' list above</li>
+        </ul>
+    </div>
 </div>

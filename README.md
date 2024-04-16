@@ -1,6 +1,6 @@
 # Web Dev Crash Course
 
-Last updated 3rd Oct 2023
+Last updated 15th April 2024
 
 # To update this material...
 
