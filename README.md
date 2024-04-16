@@ -13,3 +13,4 @@ To update this material...
 Other important notes
 - The StackBlitz project used is not the default Angular template, as there is no way to open a terminal tab in the default Angular template
 - StackBlitz limits the total size of the uploaded project to around 1MB. As the biggest files in the code base are the included images, images in 'Angular & GitHub Pages' are sourced directly from the GitHub repo to save on assets needed to be uploaded to StackBlitz. Images in 'Angular Basics' are sourced from uploaded assets, as participants are directed to follow that implementation to include another image.
+- If still unable to upload new files to StackBlitz due to size issues, try deleting the package-lock file - from experience this was around 0.5MB
